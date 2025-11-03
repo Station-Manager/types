@@ -10,8 +10,8 @@ type Config struct {
 	SSLMode         string `json:"ssl_mode" validate:"required,oneof=disable require verify-ca verify-full"`
 	MaxOpenConns    int    `json:"max_open_conns" validate:"required,min=1"`
 	MaxIdleConns    int    `json:"max_idle_conns" validate:"required,min=1"`
-	ConnMaxLifetime int    `json:"conn_max_lifetime" validate:"required,min=0"`  // Number of minutes
-	ConnMaxIdleTime int    `json:"conn_max_idle_time" validate:"required,min=0"` // Number of minutes
+	ConnMaxLifetime int    `json:"conn_max_lifetime" validate:"required,min=0"`  // Number of minutes: 1-15 minutes
+	ConnMaxIdleTime int    `json:"conn_max_idle_time" validate:"required,min=0"` // Number of minutes: 1-5 minutes
 
 	ContextTimeout int `json:"context_timeout" validate:"required,min=5"` // Number of seconds, with a minimum of 5 seconds
 
