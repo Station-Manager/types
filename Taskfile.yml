@@ -1,7 +1,7 @@
 version: '3'
 
 vars:
-  MODULE_NAME: "Errors"
+  MODULE_NAME: "Types"
 
 includes:
   version: ../Taskfile.version.yml
