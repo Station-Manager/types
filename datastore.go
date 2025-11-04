@@ -2,6 +2,8 @@ package types
 
 type DatastoreConfig struct {
 	Driver          string `json:"driver" validate:"required,oneof=postgres sqlite3"`
+	Path            string `json:"path" validate:"required,min=1"`    // Used for sqlite3 only
+	Options         string `json:"options" validate:"required,min=1"` // Used for sqlite3 only
 	Host            string `json:"host" validate:"required,hostname|ip"`
 	Port            int    `json:"port" validate:"required,min=1,max=65535"`
 	User            string `json:"user" validate:"required,min=1,max=63,alphanum|contains=_|contains=-"`
