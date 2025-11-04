@@ -13,7 +13,8 @@ type DatastoreConfig struct {
 	ConnMaxLifetime int    `json:"conn_max_lifetime" validate:"required,min=0"`  // Number of minutes: 1-15 minutes
 	ConnMaxIdleTime int    `json:"conn_max_idle_time" validate:"required,min=0"` // Number of minutes: 1-5 minutes
 
-	ContextTimeout int `json:"context_timeout" validate:"required,min=5"` // Number of seconds, with a minimum of 5 seconds
+	ContextTimeout            int `json:"context_timeout" validate:"required,min=5"`             // Number of seconds, with a minimum of 5 seconds
+	TransactionContextTimeout int `json:"transaction_context_timeout" validate:"required,min=5"` // Number of seconds, with a minimum of 5 seconds
 
 	Debug bool // Enable SQLBoiler query logging
 }
