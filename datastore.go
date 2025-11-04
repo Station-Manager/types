@@ -1,6 +1,6 @@
-package database
+package types
 
-type Config struct {
+type DatastoreConfig struct {
 	Driver          string `json:"driver" validate:"required,oneof=postgres sqlite3"`
 	Host            string `json:"host" validate:"required,hostname|ip"`
 	Port            int    `json:"port" validate:"required,min=1,max=65535"`
