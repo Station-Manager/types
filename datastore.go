@@ -1,5 +1,10 @@
 package types
 
+const (
+	PostgresServiceName = "postgres"
+	SqliteServiceName   = "sqlite"
+)
+
 type DatastoreConfig struct {
 	Driver          string `json:"driver" validate:"required,oneof=postgres sqlite"`
 	Path            string `json:"path" validate:"required_if=Driver sqlite"` // Used for sqlite3 only
