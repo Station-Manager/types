@@ -13,5 +13,5 @@ type LoggingConfig struct {
 	LogFileMaxAgeDays      int    `json:"log_file_max_age_days" validate:"min=7"`
 	LogFileMaxSizeMB       int    `json:"log_file_max_size_mb" validate:"min=10"`
 	ShutdownTimeoutMS      int    `json:"shutdown_timeout_ms" validate:"omitempty,min=10,max=10000"` // Timeout for graceful shutdown (10ms-10s, 0=use default)
-	ShutdownTimeoutWarning bool   `json:"shutdown_timeout_warning"`                                  // Log warning if shutdown timeout is exceeded
+	ShutdownTimeoutWarning bool   `json:"shutdown_timeout_warning"`                                  // Log warning if the shutdown timeout is exceeded
 }
