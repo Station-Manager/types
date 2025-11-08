@@ -1,7 +1,5 @@
 package types
 
-const LoggerServiceName = "logger"
-
 type LoggingConfig struct {
 	Level                  string `json:"level" validate:"oneof=trace debug info warn error fatal panic"`
 	SkipFrameCount         int    `json:"skip_frame_count" validate:"min=0"`

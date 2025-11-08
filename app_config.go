@@ -1,7 +1,5 @@
 package types
 
-const AppConfigServiceName = "configservice"
-
 type AppConfig struct {
 	DatastoreConfig DatastoreConfig `json:"datastore_config"`
 	LoggingConfig   LoggingConfig   `json:"logging_config"`
