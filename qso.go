@@ -5,7 +5,7 @@ type Qso struct {
 
 	// LogbookID represents the foreign key to the logbook associated with a QSO entry.
 	// Every QSO entry MUST have a logbook associated with it.
-	LogbookID int64 `json:"logbook_id" adapter:"-"`
+	LogbookID int64 `json:"logbook_id"`
 
 	/*
 		All the below fields are compatible with the ADI format and are populated by the adapter.
