@@ -7,8 +7,8 @@ const (
 
 type DatastoreConfig struct {
 	Driver                    string            `json:"driver" validate:"oneof=postgres sqlite"`
-	Path                      string            `json:"path" validate:"required_if=Driver sqlite,omitempty"` // Used for sqlite3 only
-	Options                   string            `json:"options" validate:"omitempty"`                        // Used for sqlite3 only
+	Path                      string            `json:"path" validate:"required_if=Driver sqlite,omitempty"`    // Used for sqlite only
+	Options                   map[string]string `json:"options" validate:"required_if=Driver sqlite,omitempty"` // Used for sqlite only
 	Host                      string            `json:"host" validate:"required_if=Driver postgres,omitempty,hostname|ip"`
 	Port                      int               `json:"port" validate:"required_if=Driver postgres,omitempty,min=1,max=65535"`
 	User                      string            `json:"user" validate:"required_if=Driver postgres,omitempty,min=1,max=63,alphanum|contains=_|contains=-"`
