@@ -15,7 +15,7 @@ type DatastoreConfig struct {
 	Password                  string            `json:"pass" validate:"required_if=Driver postgres,omitempty,min=1"`
 	Database                  string            `json:"database" validate:"required_if=Driver postgres,omitempty,min=1,max=63,alphanum|contains=_|contains=-"`
 	SSLMode                   string            `json:"ssl_mode" validate:"required_if=Driver postgres,omitempty,oneof=disable require verify-ca verify-full"`
-	MaxOpenConns              int               `json:"max_open_conns" validate:"min=1"`
+	MaxOpenConns              int               `json:"max_open_conns" validate:"min=1"` // For Postgres, minimum is 5 (enforced in database validation)
 	MaxIdleConns              int               `json:"max_idle_conns" validate:"min=1"`
 	ConnMaxLifetime           int               `json:"conn_max_lifetime" validate:"min=0"`           // Number of minutes
 	ConnMaxIdleTime           int               `json:"conn_max_idle_time" validate:"min=0"`          // Number of minutes
