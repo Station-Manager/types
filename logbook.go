@@ -6,7 +6,7 @@ type Logbook struct {
 	Callsign    string `json:"callsign"`
 	Description string `json:"description"`
 	ApiKey      string `json:"api_key,omitempty"` // Not part of the server models
-	UID         int64  `json:"uid,omitempty"`
+	UserID      int64  `json:"user_id"`           // FK
 }
 
 type LogbookList []Logbook
