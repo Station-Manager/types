@@ -9,6 +9,7 @@ type User struct {
 	Issuer             string    `json:"issuer,omitempty"`
 	Subject            string    `json:"subject,omitempty"`
 	Email              string    `json:"email,omitempty"`
+	EmailConfirmed     bool      `json:"email_confirmed"`
 	BootstrapHash      string    `json:"bootstrap_hash,omitempty"`
 	BootstrapExpiresAt time.Time `json:"bootstrap_expires_at,omitempty"`
 	BootstrapUsedAt    time.Time `json:"bootstrap_used_at,omitempty"`
