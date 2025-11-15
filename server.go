@@ -1,14 +1,19 @@
 package types
 
-import "time"
+type RequestAction string
 
-type RegisterLogbookRequest struct {
-	Logbook
+func (s RequestAction) String() string {
+	return string(s)
 }
 
-type RegisterLogbookResponse struct {
-	RemoteLogbookID int64      `json:"remote_logbook_id"`
-	APIKey          string     `json:"api_key"`
-	CreatedAt       time.Time  `json:"created_at"`
-	ExpiresAt       *time.Time `json:"expires_at"`
+const (
+	// RegisterLogbookAction registers a new logbook with the server.
+	RegisterLogbookAction RequestAction = "register_logbook"
+)
+
+type PostRequest struct {
+	Callsign string        `json:"callsign"` // The callsign associated with the user account *NOT THE LOGBOOK CALLSIGN*. The logbook callsign is associated with Key.
+	Key      string        `json:"key"`      // Logbook's API Key, or if registering, the Bootstrap Key
+	Action   RequestAction `json:"action"`   // The action to perform
+	Data     string        `json:"data"`     // The data to send
 }
