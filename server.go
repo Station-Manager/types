@@ -9,6 +9,7 @@ func (s RequestAction) String() string {
 const (
 	// RegisterLogbookAction registers a new logbook with the server.
 	RegisterLogbookAction RequestAction = "register_logbook"
+	InsertQsoAction                     = "insert_qso"
 )
 
 type PostRequest struct {
