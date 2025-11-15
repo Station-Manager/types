@@ -9,14 +9,14 @@ type QsoDetails struct {
 	Comment     string `json:"comment"`
 	ContestId   string `json:"contest_id"`
 	Distance    string `json:"distance"` // km
-	Freq        string `json:"freq"`
+	Freq        string `json:"freq" validate:"required"`
 	FreqRx      string `json:"freq_rx"`
-	Mode        string `json:"mode"`
+	Mode        string `json:"mode" validate:"required"`
 	Submode     string `json:"submode"`
 	MySig       string `json:"my_sig"`
 	MySigInfo   string `json:"my_sig_info"`
 	Notes       string `json:"notes"` // information of interest to the logging station's operator
-	QsoDate     string `json:"qso_date"`
+	QsoDate     string `json:"qso_date" validate:"required"`
 	QsoDateOff  string `json:"qso_date_off"`
 	QsoRandom   string `json:"qso_random"`
 	QsoComplete string `json:"qso_complete"`

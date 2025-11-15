@@ -25,5 +25,5 @@ type LoggingStation struct {
 	MyWwffRef       string `json:"my_wwff_ref"`
 	Operator        string `json:"operator"` // the logging operator's callsign if STATION_CALLSIGN is absent, OPERATOR shall be treated as both the logging station's callsign and the logging operator's callsign
 	OwnerCallsign   string `json:"owner_callsign"`
-	StationCallsign string `json:"station_callsign"`
+	StationCallsign string `json:"station_callsign" validate:"required,min=3,max=30,alphanum"`
 }
