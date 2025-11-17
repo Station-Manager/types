@@ -21,12 +21,12 @@ type PostRequest struct {
 
 type ServerConfig struct {
 	Name         string `json:"name"` // AppName for goFiber
-	Host         string `json:"host"`
-	Port         int    `json:"port"`
+	Host         string `json:"host" validate:"required,hostname"`
+	Port         int    `json:"port" validate:"required,min=3000,max=65535"`
 	TLSEnabled   bool   `json:"tls_enabled"`
-	TLSCertFile  string `json:"tls_cert_file"`
-	TLSKeyFile   string `json:"tls_key_file"`
-	ReadTimeout  int    `json:"read_timeout"`  // Seconds
-	WriteTimeout int    `json:"write_timeout"` // Seconds
-	IdleTimeout  int    `json:"idle_timeout"`  // Seconds
+	TLSCertFile  string `json:"tls_cert_file" validate:"required_if=TLSEnabled true"`
+	TLSKeyFile   string `json:"tls_key_file" validate:"required_if=TLSEnabled true"`
+	ReadTimeout  int    `json:"read_timeout" validate:"required"`  // Seconds
+	WriteTimeout int    `json:"write_timeout" validate:"required"` // Seconds
+	IdleTimeout  int    `json:"idle_timeout" validate:"required"`  // Seconds
 }
