@@ -16,7 +16,12 @@ type PostRequest struct {
 	Callsign string        `json:"callsign"` // The callsign associated with the user account *NOT THE LOGBOOK CALLSIGN*. The logbook callsign is associated with Key.
 	Key      string        `json:"key"`      // Logbook's API Key, or if registering, the Bootstrap Key
 	Action   RequestAction `json:"action"`   // The action to perform
-	Data     string        `json:"data"`     // The data to send
+
+	// Action-specific payloads (only one is expected to be non-nil depending on Action).
+	// For RegisterLogbookAction, a Logbook must be provided.
+	Logbook *Logbook `json:"logbook,omitempty"`
+	// For InsertQsoAction, Qso must be provided.
+	Qso *Qso `json:"qso,omitempty"`
 }
 
 type ServerConfig struct {
@@ -29,4 +34,5 @@ type ServerConfig struct {
 	ReadTimeout  int    `json:"read_timeout" validate:"required"`  // Seconds
 	WriteTimeout int    `json:"write_timeout" validate:"required"` // Seconds
 	IdleTimeout  int    `json:"idle_timeout" validate:"required"`  // Seconds
+	BodyLimit    int    `json:"body_limit" validate:"required"`
 }
