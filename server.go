@@ -13,11 +13,8 @@ const (
 )
 
 type PostRequest struct {
-	Callsign string        `json:"callsign"` // The callsign associated with the user account *NOT THE LOGBOOK CALLSIGN*. The logbook callsign is associated with Key.
-	Key      string        `json:"key"`      // Logbook's API Key, or if registering, the Bootstrap Key
-	Action   RequestAction `json:"action"`   // The action to perform
-
-	// Action-specific payloads (only one is expected to be non-nil depending on Action).
+	Callsign string `json:"callsign"` // The callsign associated with the user account *NOT THE LOGBOOK CALLSIGN*. The logbook callsign is associated with Key.
+	Key      string `json:"key"`      // Logbook's API Key, or if registering, the Bootstrap Key
 	// For RegisterLogbookAction, a Logbook must be provided.
 	Logbook *Logbook `json:"logbook,omitempty"`
 	// For InsertQsoAction, Qso must be provided.
