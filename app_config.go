@@ -5,4 +5,5 @@ type AppConfig struct {
 	LoggingConfig   LoggingConfig   `json:"logging_config"`
 	RequiredConfigs RequiredConfigs `json:"required_configs"`
 	ServerConfig    ServerConfig    `json:"server_config"`
+	RigConfigs      []RigConfig     `json:"rig_configs"`
 }
