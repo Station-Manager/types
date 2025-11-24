@@ -10,6 +10,7 @@ type CatCommand struct {
 type CatState struct {
 	Prefix  string // The CAT command prefix.
 	Markers []Marker
+	Data    string
 }
 
 type Marker struct {
@@ -19,12 +20,12 @@ type Marker struct {
 	ValueMappings []ValueMapping
 }
 
-func (c *CatState) New(prefix string) CatState {
-	return CatState{
-		Prefix:  prefix,
-		Markers: make([]Marker, 0),
-	}
-}
+//func (c *CatState) New(prefix string) CatState {
+//	return CatState{
+//		Prefix:  prefix,
+//		Markers: make([]Marker, 0),
+//	}
+//}
 
 type ValueMapping struct {
 	Key   string
@@ -61,4 +62,15 @@ type CatConfig struct {
 	//
 	// Default is 200ms.
 	ListenerReadTimeoutMS time.Duration
+
+	// SendChannelSize is the size of the channel used to send CAT commands to the serial port.
+	//
+	// Default is 10.
+	SendChannelSize int
+
+	// ProcessingChannelSize is the size of the channel used to receive a raw response line from the serial port.
+	// It then processes the response line into a CAT status value that can be consumed by the frontend.
+	//
+	// Default is 10
+	ProcessingChannelSize int
 }
