@@ -6,14 +6,18 @@ import (
 )
 
 type SerialConfig struct {
-	PortName       string
-	BaudRate       int
-	DataBits       int
-	Parity         serial.Parity
-	StopBits       serial.StopBits
-	ReadTimeoutms  time.Duration // Milliseconds
-	WriteTimeoutms time.Duration // Milliseconds
+	PortName string
+	BaudRate int
+	DataBits int
+	Parity   serial.Parity
+	StopBits serial.StopBits
+
+	// The serial drivers' read timeout. The unit is milliseconds.
+	//
+	// Default is 200ms.
+	ReadTimeoutMS  time.Duration
+	WriteTimeoutMS time.Duration // Milliseconds
 	RTS            bool
 	DTR            bool
-	LineDelimiter  byte
+	LineDelimiter  byte // If not provided, the default is '\r'.
 }
