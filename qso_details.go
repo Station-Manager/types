@@ -1,6 +1,6 @@
 package types
 
-// QsoDetails represents the details of a QSO, and is compatible with the ADI format.
+// QsoDetails represents the details of a QSO and is compatible with the ADI format.
 type QsoDetails struct {
 	AIndex      string `json:"a_index"`
 	AntPath     string `json:"ant_path"` // ADIF, section II.B.1 - currently, we only use S and L
