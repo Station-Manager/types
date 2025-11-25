@@ -7,6 +7,11 @@ type Qso struct {
 	// Every QSO entry MUST have a logbook associated with it.
 	LogbookID int64 `json:"logbook_id" validate:"required"`
 
+	SmQsoUploadDate     string
+	SmQsoUploadStatus   string
+	SmFwrdByEmailDate   string
+	SmFwrdByEmailStatus string
+
 	/*
 		All the below fields are compatible with the ADI format and are populated by the adapter.
 		The only exception to this is the ID field, which is required by database functions.
@@ -14,4 +19,7 @@ type Qso struct {
 	QsoDetails
 	ContactedStation
 	LoggingStation
+	Qsl
 }
+
+type QsoSlice []Qso
