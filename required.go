@@ -1,5 +1,5 @@
 package types
 
 type RequiredConfigs struct {
-	DefaultRigID int64
+	DefaultRigID int64 `json:"default_rig_id"`
 }

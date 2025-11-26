@@ -7,3 +7,7 @@ type AppConfig struct {
 	ServerConfig    *ServerConfig   `json:"server_config,omitempty"`
 	RigConfigs      []RigConfig     `json:"rig_configs,omitempty"`
 }
+
+type UiConfig struct {
+	DefaultRigID int64 `json:"default_rig_id"`
+}
