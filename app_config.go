@@ -9,5 +9,7 @@ type AppConfig struct {
 }
 
 type UiConfig struct {
-	DefaultRigID int64 `json:"default_rig_id"`
+	DefaultRigID int64   `json:"default_rig_id"`
+	Logbook      Logbook `json:"logbook"`
+	RigName      string  `json:"rig_name"`
 }
