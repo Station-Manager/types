@@ -47,11 +47,11 @@ type CatStatus map[string]string
 type StateValues map[string]map[string]string
 
 type CatConfig struct {
-	// ListenerRateLimiterInterval controls how frequently the CAT listener will
+	// ListenerRateLimiterIntervalMS controls how frequently the CAT listener will
 	// poll the serial port for new data. The unit is milliseconds.
 	//
-	// Default is 250ms.
-	ListenerRateLimiterInterval time.Duration
+	// Default is 10ms.
+	ListenerRateLimiterIntervalMS time.Duration
 	// ListenerReadTimeoutMS controls how long each CAT listener cycle will wait for
 	// a framed response line from the serial client. This should typically be less
 	// than or equal to ListenerRateLimiterInterval so that each tick's read can
@@ -60,7 +60,7 @@ type CatConfig struct {
 	// If left as zero, callers may choose a sensible default or fall back to the
 	// underlying SerialConfig.ReadTimeoutMS.
 	//
-	// Default is 200ms.
+	// Default is 8ms.
 	ListenerReadTimeoutMS time.Duration
 
 	// SendChannelSize is the size of the channel used to send CAT commands to the serial port.
