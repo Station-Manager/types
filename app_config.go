@@ -6,6 +6,8 @@ type AppConfig struct {
 	RequiredConfigs RequiredConfigs `json:"required_configs"`
 	ServerConfig    *ServerConfig   `json:"server_config,omitempty"`
 	RigConfigs      []RigConfig     `json:"rig_configs,omitempty"`
+
+	LoggingStation LoggingStation `json:"logging_station"`
 }
 
 type UiConfig struct {
