@@ -14,4 +14,8 @@ type UiConfig struct {
 	DefaultRigID int64   `json:"default_rig_id"`
 	Logbook      Logbook `json:"logbook"`
 	RigName      string  `json:"rig_name"`
+	// DefaultFreq is in khz. This is used when the CAT system is unavailable.
+	DefaultFreq string `json:"default_freq"`
+	// DefaultMode is the CAT mode when the CAT system is unavailable.
+	DefaultMode string `json:"default_mode"`
 }
