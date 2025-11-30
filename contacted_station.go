@@ -12,7 +12,7 @@ type ContactedStation struct {
 	CQZ          string `json:"cqz"`
 	DXCC         string `json:"dxcc"`
 	Email        string `json:"email"`
-	EqCall       string `json:"eq_call"` // the contacted station's owner's callsign
+	EqCall       string `json:"eq_call"` // the contacted station's owner's callsign (if different from call)
 	Gridsquare   string `json:"gridsquare"`
 	Iota         string `json:"iota"`
 	IotaIslandId string `json:"iota_island_id"`
