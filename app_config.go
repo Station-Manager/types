@@ -1,11 +1,12 @@
 package types
 
 type AppConfig struct {
-	DatastoreConfig DatastoreConfig `json:"datastore_config"`
-	LoggingConfig   LoggingConfig   `json:"logging_config"`
-	RequiredConfigs RequiredConfigs `json:"required_configs"`
-	ServerConfig    *ServerConfig   `json:"server_config,omitempty"`
-	RigConfigs      []RigConfig     `json:"rig_configs,omitempty"`
+	DatastoreConfig      DatastoreConfig `json:"datastore_config"`
+	LoggingConfig        LoggingConfig   `json:"logging_config"`
+	RequiredConfigs      RequiredConfigs `json:"required_configs"`
+	ServerConfig         *ServerConfig   `json:"server_config,omitempty"`
+	RigConfigs           []RigConfig     `json:"rig_configs,omitempty"`
+	LookupServiceConfigs []LookupConfig  `json:"lookup_service_configs,omitempty"`
 
 	LoggingStation LoggingStation `json:"logging_station"`
 }
