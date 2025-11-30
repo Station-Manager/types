@@ -2,6 +2,10 @@ package types
 
 // ContactedStation represents details of the station contacted during a QSO, and is compatible with the ADI format.
 type ContactedStation struct {
+	// ID is the primary key of the ContactedStation table. This is only used when updating the contacted station details.
+	// Notice the JSON tag for this struct is "csid" so that it does not clash with the "id" field of the QSO struct.
+	// See the models.ts file for more details.
+	ID           int64  `json:"csid"`
 	Address      string `json:"address"`
 	Age          string `json:"age"`
 	Altitude     string `json:"altitude"`
