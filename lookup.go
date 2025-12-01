@@ -9,6 +9,6 @@ type LookupConfig struct {
 	Username    string        `json:"username,omitempty"`
 	Password    string        `json:"password,omitempty"`
 	UserAgent   string        `json:"useragent"`
-	HttpTimeout time.Duration `json:"timeout"`
+	HttpTimeout time.Duration `json:"timeout"` // Seconds
 	ViewUrl     string        `json:"view_url,omitempty"`
 }

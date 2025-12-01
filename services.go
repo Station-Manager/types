@@ -6,4 +6,5 @@ const (
 	LoggingServiceName      = "loggingservice"
 	CatServiceName          = "catservice"
 	HamNutLookupServiceName = "hamnutlookupservice"
+	QrzLookupServiceName    = "qrzlookupservice"
 )
