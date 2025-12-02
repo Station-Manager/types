@@ -13,8 +13,6 @@ type QsoDetails struct {
 	FreqRx      string `json:"freq_rx"`
 	Mode        string `json:"mode" validate:"required"`
 	Submode     string `json:"submode"`
-	MySig       string `json:"my_sig"`
-	MySigInfo   string `json:"my_sig_info"`
 	Notes       string `json:"notes"` // information of interest to the logging station's operator
 	QsoDate     string `json:"qso_date" validate:"required"`
 	QsoDateOff  string `json:"qso_date_off"`
@@ -22,11 +20,9 @@ type QsoDetails struct {
 	QsoComplete string `json:"qso_complete"`
 	RstRcvd     string `json:"rst_rcvd"`
 	RstSent     string `json:"rst_sent"`
-	RxPwr       string `json:"rx_pwr"`   // the contacted station's transmitter power in Watts with a value greater than or equal to 0
-	Sig         string `json:"sig"`      // the name of the contacted station's special activity or interest group
-	SigInfo     string `json:"sig_info"` // information associated with the contacted station's activity or interest group
-	SRX         string `json:"srx"`      // contest QSO received serial number with a value greater than or equal to 0
-	STX         string `json:"stx"`      // contest QSO transmitted serial number with a value greater than or equal to 0
+	RxPwr       string `json:"rx_pwr"` // the contacted station's transmitter power in Watts with a value greater than or equal to 0
+	SRX         string `json:"srx"`    // contest QSO received serial number with a value greater than or equal to 0
+	STX         string `json:"stx"`    // contest QSO transmitted serial number with a value greater than or equal to 0
 	TimeOff     string `json:"time_off"`
 	TimeOn      string `json:"time_on"`
 	TxPwr       string `json:"tx_pwr"` // the logging station's power in Watts with a value greater than or equal to 0

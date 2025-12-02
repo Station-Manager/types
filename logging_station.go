@@ -21,6 +21,8 @@ type LoggingStation struct {
 	MyName          string `json:"my_name"`
 	MyPostalCode    string `json:"my_postal_code"`
 	MyRig           string `json:"my_rig"`
+	MySig           string `json:"my_sig"`
+	MySigInfo       string `json:"my_sig_info"`
 	MyStreet        string `json:"my_street"`
 	MyWwffRef       string `json:"my_wwff_ref"`
 	Operator        string `json:"operator"` // the logging operator's callsign if STATION_CALLSIGN is absent, OPERATOR shall be treated as both the logging station's callsign and the logging operator's callsign
