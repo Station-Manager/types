@@ -25,7 +25,7 @@ type Qso struct {
 	LoggingStation
 	Qsl
 
-	CountryDetails Country // More detailed information about the contacted station's country
+	CountryDetails Country `json:"country_details"` // More detailed information about the contacted station's country
 }
 
 type QsoSlice []Qso
