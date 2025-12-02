@@ -14,4 +14,5 @@ type Country struct {
 	ShortPathBearing  string `json:"short_path_bearing"`
 	LongPathBearing   string `json:"long_path_bearing"`
 	IsNewEntity       bool   `json:"is_new_entity"` // Indicates if this QSO is with a new country for the logging station
+	LocalTime         string `json:"local_time"`
 }
