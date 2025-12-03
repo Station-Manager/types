@@ -20,7 +20,8 @@ type UiConfig struct {
 	// DefaultMode is the CAT mode when the CAT system is unavailable.
 	DefaultMode        string `json:"default_mode"`
 	OwnersCallsign     string `json:"owners_callsign"`
-	PowerMultiplier    int    `json:"power_multiplier"`
 	DefaultIsRandomQso bool   `json:"default_is_random_qso"`
+	UsePowerMultiplier bool   `json:"use_power_multiplier"`
+	PowerMultiplier    int    `json:"power_multiplier"`
 	DefaultTxPower     int    `json:"default_tx_power"`
 }
