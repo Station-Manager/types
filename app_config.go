@@ -18,7 +18,8 @@ type UiConfig struct {
 	// DefaultFreq is in khz. This is used when the CAT system is unavailable.
 	DefaultFreq string `json:"default_freq"`
 	// DefaultMode is the CAT mode when the CAT system is unavailable.
-	DefaultMode     string `json:"default_mode"`
-	OwnersCallsign  string `json:"owners_callsign"`
-	PowerMultiplier string `json:"power_multiplier"`
+	DefaultMode        string `json:"default_mode"`
+	OwnersCallsign     string `json:"owners_callsign"`
+	PowerMultiplier    string `json:"power_multiplier"`
+	DefaultIsRandomQso bool   `json:"default_is_random_qso"`
 }
