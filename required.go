@@ -7,4 +7,5 @@ type RequiredConfigs struct {
 	PowerMultiplier    string `json:"power_multiplier"`
 	OwnersCallsign     string `json:"owners_callsign"`
 	DefaultIsRandomQso bool   `json:"default_is_random_qso"`
+	DefaultTxPower     int    `json:"default_tx_power"`
 }
