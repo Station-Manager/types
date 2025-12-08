@@ -7,7 +7,7 @@ type Country struct {
 	Continent         string `json:"continent" hamnut:"continent"`
 	CQZone            string `json:"cq_zone" hamnut:"cqZone"`
 	ITUZone           string `json:"itu_zone" hamnut:"ituZone"`
-	DXCC              string `json:"dxcc" hamnut:"primaryDXCCPrefix"`
+	DXCCPrefix        string `json:"dxcc_prefix" hamnut:"primaryDXCCPrefix"`
 	TimeOffset        string `json:"time_offset" hamnut:"timeOffset"`
 	ShortPathDistance string `json:"short_path_distance"`
 	LongPathDistance  string `json:"long_path_distance"`
