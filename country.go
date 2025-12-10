@@ -1,6 +1,7 @@
 package types
 
 type Country struct {
+	ID                int64
 	Name              string `json:"name" hamnut:"countryName"`
 	Prefix            string `json:"prefix" hamnut:"prefix"`
 	Ccode             string `json:"ccode" hamnut:"countryCode"`
