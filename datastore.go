@@ -1,8 +1,8 @@
 package types
 
 const (
-	PostgresServiceName = "postgres"
-	SqliteServiceName   = "sqlite"
+	PostgresDriverName = "postgres"
+	SqliteDriverName   = "sqlite"
 )
 
 type DatastoreConfig struct {
