@@ -11,4 +11,8 @@ type EmailConfig struct {
 	To       string `json:"to" validate:"required,email"`
 	Subject  string `json:"subject"`
 	Body     string `json:"body"`
+	// SMTP operational knobs
+	SmtpDialTimeoutSec int `json:"smtp_dial_timeout_sec,omitempty"`
+	SmtpRetryCount     int `json:"smtp_retry_count,omitempty"`
+	SmtpRetryDelaySec  int `json:"smtp_retry_delay_sec,omitempty"`
 }
