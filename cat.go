@@ -20,13 +20,6 @@ type Marker struct {
 	ValueMappings []ValueMapping
 }
 
-//func (c *CatState) New(prefix string) CatState {
-//	return CatState{
-//		Prefix:  prefix,
-//		Markers: make([]Marker, 0),
-//	}
-//}
-
 type ValueMapping struct {
 	Key   string
 	Value string
@@ -47,6 +40,7 @@ type CatStatus map[string]string
 type StateValues map[string]map[string]string
 
 type CatConfig struct {
+	Enabled bool
 	// ListenerRateLimiterIntervalMS controls how frequently the CAT listener will
 	// poll the serial port for new data. The unit is milliseconds.
 	//

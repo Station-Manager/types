@@ -9,4 +9,5 @@ type RequiredConfigs struct {
 	PowerMultiplier    int    `json:"power_multiplier"`
 	DefaultTxPower     int    `json:"default_tx_power"`
 	UsePowerMultiplier bool   `json:"use_power_multiplier"`
+	DefaultFwdEmail    string `json:"default_fwd_email"`
 }

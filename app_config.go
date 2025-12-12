@@ -25,4 +25,5 @@ type UiConfig struct {
 	UsePowerMultiplier bool   `json:"use_power_multiplier"`
 	PowerMultiplier    int    `json:"power_multiplier"`
 	DefaultTxPower     int    `json:"default_tx_power"`
+	DefaultFwdEmail    string `json:"default_fwd_email"`
 }
