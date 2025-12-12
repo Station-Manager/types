@@ -9,4 +9,5 @@ const (
 	HamNutLookupServiceName  = "hamnutlookupservice"
 	QrzLookupServiceName     = "qrzlookupservice"
 	QrzForwardingServiceName = "qrzforwardingservice"
+	EmailServiceName         = "emailservice"
 )

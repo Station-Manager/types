@@ -8,8 +8,8 @@ type AppConfig struct {
 	RigConfigs           []RigConfig       `json:"rig_configs,omitempty"`
 	LookupServiceConfigs []LookupConfig    `json:"lookup_service_configs,omitempty"`
 	ForwardingConfigs    []ForwarderConfig `json:"forwarding_configs,omitempty"`
-
-	LoggingStation LoggingStation `json:"logging_station"`
+	EmailConfigs         EmailConfig       `json:"email_configs,omitempty"`
+	LoggingStation       LoggingStation    `json:"logging_station"`
 }
 
 type UiConfig struct {
