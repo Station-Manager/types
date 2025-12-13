@@ -16,9 +16,11 @@ type Qso struct {
 	SmFwrdByEmailDate   string
 	SmFwrdByEmailStatus string
 
+	QrzComUploadDate   string `json:"qrzcom_qso_upload_date"`
+	QrzComUploadStatus string `json:"qrzcom_qso_upload_status"`
 	/*
 		All the below fields are compatible with the ADI format and are populated by the adapter.
-		The only exception to this is the ID field, which is required by database functions.
+		The only exception to this is the [xx]ID/ID fields, which are required by database functions.
 	*/
 	QsoDetails
 	ContactedStation
