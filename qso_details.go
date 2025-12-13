@@ -4,17 +4,17 @@ package types
 type QsoDetails struct {
 	AIndex      string `json:"a_index"`
 	AntPath     string `json:"ant_path"` // ADIF, section II.B.1 - currently, we only use S and L
-	Band        string `json:"band"`
+	Band        string `json:"band" validate:"band"`
 	BandRx      string `json:"band_rx"` //in a split frequency QSO, the logging station's receiving band
 	Comment     string `json:"comment"`
 	ContestId   string `json:"contest_id"`
 	Distance    string `json:"distance"` // km
-	Freq        string `json:"freq" validate:"required"`
+	Freq        string `json:"freq"`
 	FreqRx      string `json:"freq_rx"`
-	Mode        string `json:"mode" validate:"required"`
+	Mode        string `json:"mode" validate:"mode"`
 	Submode     string `json:"submode"`
 	Notes       string `json:"notes"` // information of interest to the logging station's operator
-	QsoDate     string `json:"qso_date" validate:"required"`
+	QsoDate     string `json:"qso_date"`
 	QsoDateOff  string `json:"qso_date_off"`
 	QsoRandom   string `json:"qso_random"`
 	QsoComplete string `json:"qso_complete"`
