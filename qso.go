@@ -11,10 +11,10 @@ type Qso struct {
 	// Every QSO entry MUST have a session associated with it.
 	SessionID int64 `json:"session_id" validate:"required"`
 
-	SmQsoUploadDate     string
-	SmQsoUploadStatus   string
-	SmFwrdByEmailDate   string
-	SmFwrdByEmailStatus string
+	SmQsoUploadDate     string `json:"sm_qso_upload_date"`
+	SmQsoUploadStatus   string `json:"sm_qso_upload_status"`
+	SmFwrdByEmailDate   string `json:"sm_fwrd_by_email_date"`
+	SmFwrdByEmailStatus string `json:"sm_fwrd_by_email_status"`
 
 	QrzComUploadDate   string `json:"qrzcom_qso_upload_date"`
 	QrzComUploadStatus string `json:"qrzcom_qso_upload_status"`
