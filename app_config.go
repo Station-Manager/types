@@ -26,4 +26,5 @@ type UiConfig struct {
 	PowerMultiplier    int    `json:"power_multiplier"`
 	DefaultTxPower     int    `json:"default_tx_power"`
 	DefaultFwdEmail    string `json:"default_fwd_email"`
+	OwnerCallsign      string `json:"owner_callsign"`
 }
