@@ -9,5 +9,6 @@ type RequiredConfigs struct {
 	DefaultTxPower     int    `json:"default_tx_power"`
 	UsePowerMultiplier bool   `json:"use_power_multiplier"`
 	// The default TO email address.
-	DefaultFwdEmail string `json:"default_fwd_email"`
+	DefaultFwdEmail              string `json:"default_fwd_email"`
+	QsoForwardingIntervalSeconds int    `json:"qso_forwarding_interval_seconds"`
 }
