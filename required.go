@@ -1,5 +1,7 @@
 package types
 
+import "time"
+
 type RequiredConfigs struct {
 	DefaultRigID       int64  `json:"default_rig_id"`
 	DefaultFreq        string `json:"default_freq"`
@@ -9,6 +11,6 @@ type RequiredConfigs struct {
 	DefaultTxPower     int    `json:"default_tx_power"`
 	UsePowerMultiplier bool   `json:"use_power_multiplier"`
 	// The default TO email address.
-	DefaultFwdEmail              string `json:"default_fwd_email"`
-	QsoForwardingIntervalSeconds int    `json:"qso_forwarding_interval_seconds"`
+	DefaultFwdEmail              string        `json:"default_fwd_email"`
+	QsoForwardingIntervalSeconds time.Duration `json:"qso_forwarding_interval_seconds"`
 }
