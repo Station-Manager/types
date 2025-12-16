@@ -23,4 +23,10 @@ type DatastoreConfig struct {
 	TransactionContextTimeout int               `json:"transaction_context_timeout" validate:"min=5"` // Seconds
 	Debug                     bool              // Enable SQLBoiler query logging
 	Params                    map[string]string `json:"params,omitempty" validate:"omitempty"`
+
+	// Related configs
+
+	// The maximum number of QSOs to retrieve from the database for forwarding.
+	// This the SQL select LIMIT clause.
+	QsoForwardingRowLimit int `json:"qso_forwarding_row_limit"`
 }
