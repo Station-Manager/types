@@ -26,4 +26,5 @@ type QsoDetails struct {
 	TimeOff     string `json:"time_off"`
 	TimeOn      string `json:"time_on"`
 	TxPwr       string `json:"tx_pwr"` // the logging station's power in Watts with a value greater than or equal to 0
+	Rig         string `json:"rig"`
 }

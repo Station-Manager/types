@@ -25,9 +25,10 @@ type ContactedStation struct {
 	Lon          string `json:"lon"`
 	Name         string `json:"name"`
 	QTH          string `json:"qth"`
-	Rig          string `json:"rig"`
-	Sig          string `json:"sig"`      // the name of the contacted station's special activity or interest group
-	SigInfo      string `json:"sig_info"` // information associated with the contacted station's activity or interest group
-	Web          string `json:"web"`
-	WwffRef      string `json:"wwff_ref"`
+	// These belong to a QSO, not necessarily a ContactedStation
+	//Rig          string `json:"rig"`
+	Sig     string `json:"sig"`      // the name of the contacted station's special activity or interest group
+	SigInfo string `json:"sig_info"` // information associated with the contacted station's activity or interest group
+	Web     string `json:"web"`
+	WwffRef string `json:"wwff_ref"`
 }
