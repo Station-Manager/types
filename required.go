@@ -3,6 +3,7 @@ package types
 import "time"
 
 type RequiredConfigs struct {
+	DefaultLogbookID   int64  `json:"default_logbook_id"`
 	DefaultRigID       int64  `json:"default_rig_id"`
 	DefaultFreq        string `json:"default_freq"`
 	DefaultMode        string `json:"default_mode"`
