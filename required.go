@@ -16,5 +16,13 @@ type RequiredConfigs struct {
 
 	// QsoForwardingIntervalSeconds determines the interval at which QSO forwarding occurs, defined as a duration in
 	// seconds. The forwarding process checks for queued QSOs at the interval defined by this setting.
-	QsoForwardingIntervalSeconds time.Duration `json:"qso_forwarding_interval_seconds"`
+	QsoForwardingPollIntervalSeconds time.Duration `json:"qso_forwarding_poll_interval_seconds"`
+	QsoForwardingWorkerCount         int           `json:"qso_forwarding_worker_count"`
+
+	// QsoForwardingQueueSize defines the maximum number of QSOs that can be stored in the forwarding queue awaiting processing.
+	QsoForwardingQueueSize int `json:"qso_forwarding_queue_size"`
+
+	// The maximum number of QSOs to retrieve from the database for forwarding.
+	// This the SQL select LIMIT clause.
+	QsoForwardingRowLimit int `json:"qso_forwarding_row_limit"`
 }
