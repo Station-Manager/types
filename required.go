@@ -25,4 +25,7 @@ type RequiredConfigs struct {
 	// The maximum number of QSOs to retrieve from the database for forwarding.
 	// This the SQL select LIMIT clause.
 	QsoForwardingRowLimit int `json:"qso_forwarding_row_limit"`
+	// This is related to forwarding. Writes to the SQLite database are serialized to prevent concurrent write conflicts.
+	// and busy signal.
+	DatabaseWriteQueueSize int `json:"database_write_queue_size"`
 }
