@@ -28,4 +28,6 @@ type RequiredConfigs struct {
 	// This is related to forwarding. Writes to the SQLite database are serialized to prevent concurrent write conflicts.
 	// and busy signal.
 	DatabaseWriteQueueSize int `json:"database_write_queue_size"`
+
+	PagingationPageSize int `json:"pagingation_page_size"`
 }
