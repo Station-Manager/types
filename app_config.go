@@ -27,4 +27,6 @@ type UiConfig struct {
 	DefaultTxPower     int    `json:"default_tx_power"`
 	DefaultFwdEmail    string `json:"default_fwd_email"`
 	OwnerCallsign      string `json:"owner_callsign"`
+
+	PaginationPageSize int `json:"pagination_page_size"`
 }
