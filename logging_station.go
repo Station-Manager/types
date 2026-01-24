@@ -3,7 +3,7 @@ package types
 // LoggingStation represents the details of the station logging the QSO, including location, equipment, and operator info.
 // It is compatible with the ADI format.
 type LoggingStation struct {
-	AntennaAzimuth  string `json:"ant_az"` // the bearing from the logging station to the contacted station
+	AntennaAzimuth  string `json:"ant_az,omitempty"` // the bearing from the logging station to the contacted station. Calculated.
 	MyAltitude      string `json:"my_altitude"`
 	MyAntenna       string `json:"my_antenna"`
 	MyCity          string `json:"my_city"`
