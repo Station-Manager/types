@@ -10,6 +10,7 @@ type AppConfig struct {
 	ForwardingConfigs    []ForwarderConfig `json:"forwarding_configs,omitempty"`
 	EmailConfigs         EmailConfig       `json:"email_configs,omitempty"`
 	LoggingStation       LoggingStation    `json:"logging_station"`
+	OptionalConfigs      OptionalConfigs   `json:"optional_configs"`
 }
 
 type UiConfig struct {
@@ -29,4 +30,6 @@ type UiConfig struct {
 	OwnerCallsign      string `json:"owner_callsign"`
 
 	PaginationPageSize int `json:"pagination_page_size"`
+
+	QrzViewUrl string `json:"qrz_view_url"`
 }
