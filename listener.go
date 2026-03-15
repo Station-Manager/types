@@ -1,8 +1,9 @@
 package types
 
 type ListenerConfig struct {
-	Name       string
-	Host       string
-	Port       int
-	BufferSize int
+	Name       string `json:"name"`
+	Enabled    bool   `json:"enabled"`
+	Host       string `json:"host"`
+	Port       int    `json:"port"`
+	BufferSize int    `json:"buffer_size"`
 }
