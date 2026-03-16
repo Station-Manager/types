@@ -5,5 +5,6 @@ type ListenerConfig struct {
 	Enabled    bool   `json:"enabled"`
 	Host       string `json:"host"`
 	Port       int    `json:"port"`
+	Protocol   string `json:"protocol"` // UDP or TCP
 	BufferSize int    `json:"buffer_size"`
 }
