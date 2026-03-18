@@ -1,10 +1,10 @@
 package types
 
 type ListenerConfig struct {
-	Name       string `json:"name"`
+	Name       string `json:"name" validate:"required"`
 	Enabled    bool   `json:"enabled"`
-	Host       string `json:"host"`
-	Port       int    `json:"port"`
-	Protocol   string `json:"protocol"` // UDP or TCP
-	BufferSize int    `json:"buffer_size"`
+	Host       string `json:"host" validate:"required,hostname"`
+	Port       int    `json:"port" validate:"required,min=1001,max=65535"`
+	Protocol   string `json:"protocol" validate:"required,oneof=UDP TCP"` // UDP or TCP
+	BufferSize int    `json:"buffer_size" validate:"required,min=1024,max=4096"`
 }

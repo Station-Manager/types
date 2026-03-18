@@ -11,7 +11,7 @@ type AppConfig struct {
 	EmailConfigs         EmailConfig       `json:"email_configs,omitempty"`
 	LoggingStation       LoggingStation    `json:"logging_station"`
 	OptionalConfigs      OptionalConfigs   `json:"optional_configs"`
-	ListenersConfigs     []ListenerConfig  `json:"listeners_configs,omitempty"`
+	ListenerConfigs      []ListenerConfig  `json:"listener_configs,omitempty"`
 }
 
 type UiConfig struct {
