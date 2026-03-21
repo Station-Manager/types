@@ -10,4 +10,5 @@ const (
 	QrzLookupServiceName     = "qrzlookupservice"
 	QrzForwardingServiceName = "qrzforwardingservice"
 	EmailServiceName         = "emailservice"
+	ListenersServiceName     = "listenermanagement"
 )
